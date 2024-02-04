@@ -29,9 +29,9 @@ class  account{
     }
 
 
-    public void AddNotifyer(decimal Notyfier)
+    public void AddNotifyer()
     {
-        _notyfiers.Add(Notyfier);
+        _notyfiers.Add(INotyfier);
     }
 
 
@@ -51,8 +51,16 @@ class  account{
 
     static void Main()
     {
-        Account();
-        //Account(20000);
+        Account acc = new Account(100.0m);
+        SMSLowBalanceNotifyer smsNotifyer = new SMSLowBalanceNotifyer("+7-999-888-77-66", 50.0m);
+        EMailNotifyer emailNotifyer = new EMailNotifyer("mileschko.sibsutis@yandex.ru");
+
+        acc.AddNotifyer(smsNotifyer);
+        acc.AddNotifyer(emailNotifyer);
+
+        acc.ChangeBalance(10);
+        acc.ChangeBalance(-30);
+        acc.ChangeBalance(-70);
     }
 
 
