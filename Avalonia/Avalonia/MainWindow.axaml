@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ColorfulRectangle.MainWindow"
+        Title="Colorful Rectangle" Width="600" Height="400" MinWidth="300" MinHeight="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Khaki" Click="ChangeColor"/>
+            <Button Content="Red" Click="ChangeColor"/>
+            <Button Content="MediumVioletRed" Click="ChangeColor"/>
+            <Button Content="Bisque" Click="ChangeColor"/>
+            <Button Content="LemonChiffon" Click="ChangeColor"/>
+            <Button Content="PowderBlue" Click="ChangeColor"/>
+            <Button Content="MintCream" Click="ChangeColor"/>
+            <Button Content="Maroon" Click="ChangeColor"/>
+            <Button Content="RosyBrown" Click="ChangeColor"/>
+            <Button Content="LightPink" Click="ChangeColor"/>
+        </StackPanel>
+        
+        <GridSplitter Grid.Column="1" Background="Black" VerticalAlignment="Stretch"/>
+        
+        <Rectangle x:Name="ColorRectangle" Grid.Column="2" Fill="Khaki"/>
+    </Grid>
+</Window>

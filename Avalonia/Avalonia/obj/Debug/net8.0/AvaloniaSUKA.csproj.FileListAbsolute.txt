@@ -1,0 +1,7 @@
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\AvaloniaSUKA.csproj.AssemblyReference.cache
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\Avalonia\Resources.Inputs.cache
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\Avalonia\resources
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\AvaloniaSUKA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\AvaloniaSUKA.AssemblyInfoInputs.cache
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\AvaloniaSUKA.AssemblyInfo.cs
+C:\Users\Professional\source\repos\Avalonia\Avalonia\obj\Debug\net8.0\AvaloniaSUKA.csproj.CoreCompileInputs.cache
