@@ -1,35 +1,76 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:local="clr-namespace:CalculatorDemo"
-		x:Class="CalculatorDemo.MainWindow"
-		x:DataType="dc:CalculatorDemo.ViewModels"
-        Title="Calculator" Width="400" Height="600">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <TextBlock Text="{Binding Input, Mode=TwoWay}" Margin="10" Grid.ColumnSpan="4"/>
-        
-        <Button Content="1" Command="{Binding NumberButtonCommand}" CommandParameter="1" Margin="10" Grid.Column="0"/>
-        <Button Content="2" Command="{Binding NumberButtonCommand}" CommandParameter="2" Margin="10" Grid.Column="1"/>
-        <Button Content="3" Command="{Binding NumberButtonCommand}" CommandParameter="3" Margin="10" Grid.Column="2"/>
-		<Button Content="4" Command="{Binding NumberButtonCommand}" CommandParameter="4" Margin="10" Grid.Column="0"/>
-		<Button Content="5" Command="{Binding NumberButtonCommand}" CommandParameter="5" Margin="10" Grid.Column="1"/>
-		<Button Content="6" Command="{Binding NumberButtonCommand}" CommandParameter="6" Margin="10" Grid.Column="2"/>
-		<Button Content="7" Command="{Binding NumberButtonCommand}" CommandParameter="7" Margin="10" Grid.Column="0"/>
-		<Button Content="8" Command="{Binding NumberButtonCommand}" CommandParameter="8" Margin="10" Grid.Column="1"/>
-		<Button Content="9" Command="{Binding NumberButtonCommand}" CommandParameter="9" Margin="10" Grid.Column="2"/>
-		<Button Content="0" Command="{Binding NumberButtonCommand}" CommandParameter="0" Margin="10" Grid.Column="0"/>
-        <Button Content="+" Command="{Binding OperationButtonCommand}" CommandParameter="+" Margin="10" Grid.Column="4"/>
-		<Button Content="-" Command="{Binding OperationButtonCommand}" CommandParameter="-" Margin="10" Grid.Column="4"/>
-        
-        <!-- Добавьте остальные кнопки для других цифр и операций -->
-        
-        <Button Content="=" Command="{Binding EqualsButtonCommand}" Margin="10" Grid.Column="3"/>
-        <Button Content="C" Command="{Binding ClearButtonCommand}" Margin="10" Grid.Column="0"/>
-        <Button Content="Back" Command="{Binding BackButtonCommand}" Margin="10" Grid.Column="1"/>
-    </Grid>
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorDemo.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CalculatorDemo.MainWindow"
+        x:DataType="local:CalculatorViewModel"
+        Title="AvaloniaApplication1">
+
+	<Window.DataContext>
+		<local:CalculatorViewModel/>
+	</Window.DataContext>
+
+	<Window.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="FontSize" Value="28"/>
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="Background" Value="Red"/>
+		</Style>
+	</Window.Styles>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.1*" />
+			<ColumnDefinition Width="0.1*" />
+			<ColumnDefinition Width="0.1*" />
+			<ColumnDefinition Width="0.1*" />
+			<ColumnDefinition Width="0.1*" />
+			<ColumnDefinition Width="0.1*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition Height="0.1*"/>
+			<RowDefinition Height="0.1*"/>
+		</Grid.RowDefinitions>
+
+		
+
+
+		<TextBlock Text="{Binding Result, Mode=TwoWay}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
+
+		<Button Content="1" Command="{Binding AddNumber}" CommandParameter="1"  Grid.Column="0" Grid.Row="1" />
+		<Button Content="2" Command="{Binding AddNumber}" CommandParameter="2"  Grid.Column="1" Grid.Row="1"/>
+		<Button Content="3" Command="{Binding AddNumber}" CommandParameter="3"  Grid.Column="2" Grid.Row="1"/>
+		<Button Content="4" Command="{Binding AddNumber}" CommandParameter="4"  Grid.Column="0" Grid.Row="2"/>
+		<Button Content="5" Command="{Binding AddNumber}" CommandParameter="5"  Grid.Column="1" Grid.Row="2"/>
+		<Button Content="6" Command="{Binding AddNumber}" CommandParameter="6"  Grid.Column="2" Grid.Row="2"/>
+		<Button Content="7" Command="{Binding AddNumber}" CommandParameter="7"  Grid.Column="0" Grid.Row="3"/>
+		<Button Content="8" Command="{Binding AddNumber}" CommandParameter="8"  Grid.Column="1" Grid.Row="3"/>
+		<Button Content="9" Command="{Binding AddNumber}" CommandParameter="9"  Grid.Column="2" Grid.Row="3"/>
+		<Button Content="0" Command="{Binding AddNumber}" CommandParameter="0"  Grid.Column="1" Grid.Row="4"/>
+		<Button Content="+" Command="{Binding AddOperation}" CommandParameter="+"  Grid.Column="4" Grid.Row="4"/>
+		<Button Content="-" Command="{Binding AddOperation}" CommandParameter="-"  Grid.Column="4" Grid.Row="3"/>
+		<Button Content="*" Command="{Binding AddOperation}" CommandParameter="*"  Grid.Column="4" Grid.Row="2"/>
+		<Button Content="/" Command="{Binding AddOperation}" CommandParameter="/"  Grid.Column="4" Grid.Row="1"/>
+		<Button Content="mod" Command="{Binding AddOperation}" CommandParameter="mod"  Grid.Column="5" Grid.Row="4"/>
+		<Button Content="^" Command="{Binding AddOperation}" CommandParameter="^"  Grid.Column="5" Grid.Row="3"/>
+		<Button Content="floor" Command="{Binding AddOperation}" CommandParameter="floor"  Grid.Column="5" Grid.Row="2"/>
+		<Button Content="sin" Command="{Binding AddOperation}" CommandParameter="sin" Grid.Column="5" Grid.Row="1"/>
+		<Button Content="cos" Command="{Binding AddOperation}" CommandParameter="cos"  Grid.Column="5" Grid.Row="0"/>
+		<Button Content="tan" Command="{Binding AddOperation}" CommandParameter="tan" Grid.Column="3" Grid.Row="4"/>
+		<Button Content="log" Command="{Binding AddOperation}" CommandParameter="log"  Grid.Column="3" Grid.Row="5"/>
+		<Button Content="ln" Command="{Binding AddOperation}" CommandParameter="ln"  Grid.Column="3" Grid.Row="3"/>
+		<Button Content="ceil" Command="{Binding AddOperation}" CommandParameter="ceil" Grid.Column="3" Grid.Row="2"/>
+
+		<!-- Р”РѕР±Р°РІСЊС‚Рµ РѕСЃС‚Р°Р»СЊРЅС‹Рµ РєРЅРѕРїРєРё РґР»СЏ РґСЂСѓРіРёС… С†РёС„СЂ Рё РѕРїРµСЂР°С†РёР№ -->
+
+		<Button Content="=" Command="{Binding Equals}"  Grid.Column="3" Grid.Row="1"/>
+		<Button Content="C" Command="{Binding Clear}" Grid.Column="0" Grid.Row="4"/>
+
+		
+	</Grid>
 </Window>
