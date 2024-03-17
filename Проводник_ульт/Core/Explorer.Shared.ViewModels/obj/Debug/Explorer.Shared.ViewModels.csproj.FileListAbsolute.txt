@@ -1,0 +1,6 @@
+C:\Users\Professional\source\repos\Проводник_ульт\Core\Explorer.Shared.ViewModels\obj\Debug\Explorer.Shared.ViewModels.csproj.AssemblyReference.cache
+C:\Users\Professional\source\repos\Проводник_ульт\Core\Explorer.Shared.ViewModels\obj\Debug\Explorer.Shared.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\Professional\source\repos\Проводник_ульт\Core\Explorer.Shared.ViewModels\bin\Debug\Explorer.Shared.ViewModels.dll
+C:\Users\Professional\source\repos\Проводник_ульт\Core\Explorer.Shared.ViewModels\bin\Debug\Explorer.Shared.ViewModels.pdb
+C:\Users\Professional\source\repos\Проводник_ульт\Core\Explorer.Shared.ViewModels\obj\Debug\Explorer.Shared.ViewModels.dll
+C:\Users\Professional\source\repos\Проводник_ульт\Core\Explorer.Shared.ViewModels\obj\Debug\Explorer.Shared.ViewModels.pdb
