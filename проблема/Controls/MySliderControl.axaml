@@ -1,0 +1,23 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:MySlider">
+  <Design.PreviewWith>
+    <controls:MySliderControl/>
+  </Design.PreviewWith>
+
+  <Style Selector="controls|MySliderControl">
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <StackPanel Margin="20">
+			  
+			  <Grid  ColumnDefinitions="Auto,*">
+          <Button Command="{Binding ChangeStateCloseCommand, RelativeSource={RelativeSource TemplatedParent}}" 
+						  Margin="10,0,0,0" Grid.Column="1" CornerRadius="10">.</Button>
+				  <Slider x:Name="slider" IsVisible="{TemplateBinding ChangeStateClose}" />
+				  
+			  </Grid>
+		  </StackPanel>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>
