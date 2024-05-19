@@ -13,7 +13,7 @@
 			  <Grid  ColumnDefinitions="Auto,*">
           <Button Command="{Binding ChangeStateCloseCommand, RelativeSource={RelativeSource TemplatedParent}}" 
 						  Margin="10,0,0,0" Grid.Column="1" CornerRadius="10">.</Button>
-				  <Slider x:Name="slider" IsVisible="{TemplateBinding ChangeStateClose}" />
+				  <Slider x:Name="slider" IsVisible="{TemplateBinding IsSliderClosed}" />
 				  
 			  </Grid>
 		  </StackPanel>
